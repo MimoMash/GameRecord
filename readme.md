@@ -17,3 +17,6 @@ this.playCount = playCount;
 this.personalRating = personalRating;
 
 Then I exported and imported the class into app.mjs for future steps.
+
+# Step 3
+Made the different functions. I had to look into localStorage and how it works since i wasn't in class. We have worked with JSON files previously so it wasn't completely new. I made some simple functions to all the tasks.
