@@ -21,6 +21,7 @@ function renderGames() {
   games.forEach((game, index) => {
     const gameDiv = document.createElement("div");
     gameDiv.className = "game-card";
+
     gameDiv.innerHTML = `
       <h3>${game.title}</h3>
       <p><strong>Designer:</strong> ${game.designer}</p>
@@ -31,11 +32,30 @@ function renderGames() {
       <p><strong>Time:</strong> ${game.time}</p>
       <p><strong>Difficulty:</strong> ${game.difficulty}</p>
       <p><strong>Play Count:</strong> <span id="playCount-${index}">${game.playCount}</span></p>
-      <button>+1 Play</button>
-      <p><strong>Rating:</strong> <span id="rating-${index}">${game.personalRating}</span></p>
-      <input type="range" min="1" max="10" value="${game.personalRating}" disabled />
+      <button id="playButton-${index}">+1 Play</button>
+      <p><strong>Rating:</strong> <span id="ratingDisplay-${index}">${game.personalRating}</span></p>
+      <input id="ratingInput-${index}" type="range" min="0" max="10" value="${game.personalRating}" />
     `;
+    
     container.appendChild(gameDiv);
+
+    const ratingInput = document.getElementById(`ratingInput-${index}`);
+    const ratingDisplay = document.getElementById(`ratingDisplay-${index}`);
+    const playCountDisplay = document.getElementById(`playCount-${index}`);
+    const playCountButton = document.getElementById(`playButton-${index}`);
+
+    ratingInput.addEventListener("input", () => {
+      game.personalRating = parseInt(ratingInput.value);
+      ratingDisplay.textContent = game.personalRating;
+      saveGame(game);
+    });
+
+    playCountButton.addEventListener("click", () => {
+      game.playCount++;
+      playCountDisplay.textContent = game.playCount;
+      saveGame(game);
+    });
+
   });
 }
 
@@ -104,6 +124,8 @@ function outputGamesAsJSON() {
   
 function importGamesFromJSON(jsonArray) {
   jsonArray.forEach(data => {
+    const key = `game_${data.title}`;
+    if (!localStorage.getItem(key)) {
     const game = new Game(
       data.title,
       data.designer,
@@ -118,6 +140,7 @@ function importGamesFromJSON(jsonArray) {
       data.personalRating
     );
     saveGame(game);
+    }
   });
 }
 // #endregion

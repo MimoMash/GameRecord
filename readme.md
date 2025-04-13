@@ -26,3 +26,6 @@ I made the setupImport function to use FileReader alongside my functions from st
 
 # Step 5
 I made a function renderGames in app.mjs so I could visualize the games. When testing if the website rendered properly, it did but for some reason it duplicated Ticket To Ride. So I added a conditional to avoid duplicates inside the retrieveAllGames function. After implementing the change, the website correctly displayed the six games inside example.json.
+
+# Step 6 
+I added code inside the renderGames function to be able to interact with the button and rating slider. I had a problem with Ticket To Ride again, so I added another conditional inside the importGamesFromJSON function and also cleared my localStorage since it hadn't been updated since the beginning.
