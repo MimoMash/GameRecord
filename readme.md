@@ -29,3 +29,6 @@ I made a function renderGames in app.mjs so I could visualize the games. When te
 
 # Step 6 
 I added code inside the renderGames function to be able to interact with the button and rating slider. I had a problem with Ticket To Ride again, so I added another conditional inside the importGamesFromJSON function and also cleared my localStorage since it hadn't been updated since the beginning.
+
+# Step 7
+I added the necessary form inside index.html to display the different inputs a person can add for a new game. I also added the link URL on the webpage as I had forgotten it in the previous steps.

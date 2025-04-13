@@ -32,11 +32,12 @@ function renderGames() {
       <p><strong>Time:</strong> ${game.time}</p>
       <p><strong>Difficulty:</strong> ${game.difficulty}</p>
       <p><strong>Play Count:</strong> <span id="playCount-${index}">${game.playCount}</span></p>
+      <p><strong>Link To Game:</strong> <a href="${game.url}" target="_blank">${game.url}</a></p>
       <button id="playButton-${index}">+1 Play</button>
       <p><strong>Rating:</strong> <span id="ratingDisplay-${index}">${game.personalRating}</span></p>
       <input id="ratingInput-${index}" type="range" min="0" max="10" value="${game.personalRating}" />
     `;
-    
+
     container.appendChild(gameDiv);
 
     const ratingInput = document.getElementById(`ratingInput-${index}`);

@@ -8,6 +8,20 @@
 </head>
 <body>
   <h1>Board Game Tracker</h1>
+  <form id="addGameForm">
+    <input type="text" id="titleInput" placeholder="Title" required />
+    <input type="text" id="designerInput" placeholder="Designer" required />
+    <input type="text" id="artistInput" placeholder="Artist" />
+    <input type="text" id="publisherInput" placeholder="Publisher" />
+    <input type="number" id="yearInput" placeholder="Year" />
+    <input type="text" id="playersInput" placeholder="Players" />
+    <input type="text" id="timeInput" placeholder="Time" />
+    <input type="text" id="difficultyInput" placeholder="Difficulty" />
+    <input type="url" id="urlInput" placeholder="BoardGameGeek URL" />
+    <input type="number" id="playCountInput" placeholder="Play Count" value="0" />
+    <input type="number" id="ratingInput" placeholder="Rating" min="0" max="10" />
+    <button type="submit">Add Game</button>
+  </form>
   <input type="file" id="importSource" />
   <div id="gameContainer"></div>
   <script type="module" src="app.mjs"></script>
