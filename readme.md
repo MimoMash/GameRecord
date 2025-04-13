@@ -35,3 +35,6 @@ I added the necessary form inside index.html to display the different inputs a p
 
 # Step 8
 I made a new function to add new game and interact with the different inputs and button from step 7. Much of the code is copied from previous steps so fairly simple to make the function. It correctly stores the new game and doesn't interfere with new uploads.
+
+# Step 9 
+I added a delete button in my renderGames function inside the innerHTML so it applies to each game division. I then made a function and used the removeItem function with localStorage to remove the chosen game and update the render. Mostly copied previously written code so was pretty simple. The step 9 description said to add UI in the index.html, but since the delete button applies to each individual game, it was easier to add it in the "gameContainer" innerHTML section in my renderGames function.  

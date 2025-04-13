@@ -37,6 +37,7 @@ function renderGames() {
       <button id="playButton-${index}">+1 Play</button>
       <p><strong>Rating:</strong> <span id="ratingDisplay-${index}">${game.personalRating}</span></p>
       <input id="ratingInput-${index}" type="range" min="0" max="10" value="${game.personalRating}" />
+      <p><button id="deleteButton-${index}">Delete Game</button></p>
     `;
 
     container.appendChild(gameDiv);
@@ -45,6 +46,7 @@ function renderGames() {
     const ratingDisplay = document.getElementById(`ratingDisplay-${index}`);
     const playCountDisplay = document.getElementById(`playCount-${index}`);
     const playCountButton = document.getElementById(`playButton-${index}`);
+    const deleteButton = document.getElementById(`deleteButton-${index}`);
 
     ratingInput.addEventListener("input", () => {
       game.personalRating = parseInt(ratingInput.value);
@@ -58,7 +60,19 @@ function renderGames() {
       saveGame(game);
     });
 
+    deleteButton.addEventListener("click", () => {
+      deleteGame(game, index);
+    });
+
   });
+}
+
+function deleteGame(game, index) {
+  games.splice(index, 1);
+
+  localStorage.removeItem(`game_${game.title}`);
+
+  renderGames();
 }
 
 function setupImport() {
