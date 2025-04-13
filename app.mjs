@@ -3,8 +3,6 @@ import Game from "./models/Game.mjs";
 let games = [];
 
 loadGames();
-addNewGame();
-setupImport();
 
 console.log(games);
 
@@ -13,6 +11,45 @@ console.log(games);
 function loadGames() {
   games = retrieveAllGames();
   renderGames();
+  setupSort();
+  addNewGame();
+  setupImport();
+}
+
+function setupSort() {
+    const sortSelect = document.getElementById("sortCriteria");
+
+    sortSelect.addEventListener("change", (event) => {
+      const criteria = event.target.value;
+      sortGames(criteria);
+      renderGames();
+    });
+}
+
+function sortGames(criteria) {
+
+  const difficultyLevels = {
+    "Light": 1,
+    "Light-Medium": 2,
+    "Medium": 3,
+    "Medium-Heavy": 4,
+    "Heavy": 5
+  };
+
+  games.sort((a, b) => {
+    if (criteria === "players") {
+      return b.players - a.players;
+    } else if (criteria === "personalRating") {
+      return b.personalRating - a.personalRating;
+    } else if (criteria === "difficulty") {
+      const aDiff = difficultyLevels[a.difficulty] || 0;
+      const bDiff = difficultyLevels[b.difficulty] || 0;
+      return bDiff - aDiff;
+    } else if (criteria === "playCount") {
+      return b.playCount - a.playCount;
+    }
+    return 0;
+  });
 }
 
 function renderGames() {

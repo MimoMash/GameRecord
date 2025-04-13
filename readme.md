@@ -38,3 +38,49 @@ I made a new function to add new game and interact with the different inputs and
 
 # Step 9 
 I added a delete button in my renderGames function inside the innerHTML so it applies to each game division. I then made a function and used the removeItem function with localStorage to remove the chosen game and update the render. Mostly copied previously written code so was pretty simple. The step 9 description said to add UI in the index.html, but since the delete button applies to each individual game, it was easier to add it in the "gameContainer" innerHTML section in my renderGames function.  
+
+# Step 10
+I made a function to sort the games by the different criteria. I made a drop down selection in index.html. Since difficulty level was string, i assigned numerical values so that I could sort them in descending order. I used the sort function and added a new eventListener and used similar code to previous steps. I also added some color and editing in style.css to make the webpage look a little more alive. Below you will see all the websites I looked up to make the code.
+
+# References
+- Mozilla Contributors. (n.d.). Array.prototype.forEach(). MDN Web Docs. Mozilla. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+
+- Mozilla Contributors. (n.d.). Array.prototype.sort(). MDN Web Docs. Mozilla. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+
+- Mozilla Contributors. (n.d.). Array.prototype.push(). MDN Web Docs. Mozilla. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
+
+- Mozilla Contributors. (n.d.). Array.prototype.some(). MDN Web Docs. Mozilla. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some
+
+- Mozilla Contributors. (n.d.). parseInt(). MDN Web Docs. Mozilla. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+
+- Mozilla Contributors. (n.d.). JSON.stringify(). MDN Web Docs. Mozilla. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
+
+- Mozilla Contributors. (n.d.). JSON.parse(). MDN Web Docs. Mozilla. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
+
+- Mozilla Contributors. (n.d.). String.prototype.trim(). MDN Web Docs. Mozilla. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim
+
+- Mozilla Contributors. (n.d.). Document.getElementById(). MDN Web Docs. Mozilla. https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById
+
+- Mozilla Contributors. (n.d.). Element.innerHTML. MDN Web Docs. Mozilla. https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML
+
+- Mozilla Contributors. (n.d.). Node.appendChild(). MDN Web Docs. Mozilla. https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
+
+- Mozilla Contributors. (n.d.). EventTarget.addEventListener(). MDN Web Docs. Mozilla. https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+
+- Mozilla Contributors. (n.d.). Event.preventDefault(). MDN Web Docs. Mozilla. https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
+
+- Mozilla Contributors. (n.d.). Window.localStorage. MDN Web Docs. Mozilla. https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+
+- Mozilla Contributors. (n.d.). localStorage.setItem(). MDN Web Docs. Mozilla. https://developer.mozilla.org/en-US/docs/Web/API/Storage/setItem
+
+- Mozilla Contributors. (n.d.). localStorage.getItem(). MDN Web Docs. Mozilla. https://developer.mozilla.org/en-US/docs/Web/API/Storage/getItem
+
+- Mozilla Contributors. (n.d.). localStorage.key(). MDN Web Docs. Mozilla. https://developer.mozilla.org/en-US/docs/Web/API/Storage/key
+
+- Mozilla Contributors. (n.d.). localStorage.length. MDN Web Docs. Mozilla. https://developer.mozilla.org/en-US/docs/Web/API/Storage/length
+
+- Mozilla Contributors. (n.d.). localStorage.removeItem(). MDN Web Docs. Mozilla. https://developer.mozilla.org/en-US/docs/Web/API/Storage/removeItem
+
+- Mozilla Contributors. (n.d.). FileReader. MDN Web Docs. Mozilla. https://developer.mozilla.org/en-US/docs/Web/API/FileReader
+
+- Mozilla Contributors. (n.d.). FileReader.readAsText(). MDN Web Docs. Mozilla. https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsText

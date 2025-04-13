@@ -22,8 +22,20 @@
     <input type="number" id="ratingInput" placeholder="Rating" min="0" max="10" />
     <button type="submit">Add Game</button>
   </form>
+    <label for="sortCriteria">Sort By:</label>
+  <select id="sortCriteria">
+    <option value="players">Players</option>
+    <option value="personalRating">Rating</option>
+    <option value="difficulty">Difficulty</option>
+    <option value="playCount">Play Count</option>
+  </select>
   <input type="file" id="importSource" />
   <div id="gameContainer"></div>
+  <footer>
+    <p>
+        Mohammad Corp. All rights reserved
+    </p>
+</footer>
   <script type="module" src="app.mjs"></script>
 </body>
 </html>

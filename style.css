@@ -1,0 +1,39 @@
+h1 {
+    background-color: brown;
+    height: calc(120px - 70px);
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-weight: 1000;
+    text-shadow: -4px 3px 4px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+}
+
+body {
+    background-color: burlywood;
+    border-radius: 10px;
+}
+
+.game-card {
+    background-color: rgb(231, 228, 217);
+    padding-left: 5px;
+    padding-bottom: 1px;
+    border-radius: 5px;
+    text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: brown;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 5px;
+    text-shadow: -4px 3px 4px rgba(0, 0, 0, 0.4);
+}
