@@ -32,3 +32,6 @@ I added code inside the renderGames function to be able to interact with the but
 
 # Step 7
 I added the necessary form inside index.html to display the different inputs a person can add for a new game. I also added the link URL on the webpage as I had forgotten it in the previous steps.
+
+# Step 8
+I made a new function to add new game and interact with the different inputs and button from step 7. Much of the code is copied from previous steps so fairly simple to make the function. It correctly stores the new game and doesn't interfere with new uploads.

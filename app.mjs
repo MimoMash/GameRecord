@@ -3,6 +3,7 @@ import Game from "./models/Game.mjs";
 let games = [];
 
 loadGames();
+addNewGame();
 setupImport();
 
 console.log(games);
@@ -143,5 +144,50 @@ function importGamesFromJSON(jsonArray) {
     saveGame(game);
     }
   });
+}
+
+function addNewGame () {
+    const form = document.getElementById("addGameForm");
+    if(!form) {
+      console.error("Form not found");
+      return;
+    }
+
+    form.addEventListener("submit", (event) => { event.preventDefault(); 
+
+    const title = document.getElementById("titleInput").value.trim();
+    const designer = document.getElementById("designerInput").value.trim();
+    const artist = document.getElementById("artistInput").value.trim();
+    const publisher = document.getElementById("publisherInput").value.trim();
+    const year = parseInt(document.getElementById("yearInput").value);
+    const players = document.getElementById("playersInput").value.trim();
+    const time = document.getElementById("timeInput").value.trim();
+    const difficulty = document.getElementById("difficultyInput").value.trim();
+    const url = document.getElementById("urlInput").value.trim();
+    const playCount = parseInt(document.getElementById("playCountInput").value) || 0;
+    const personalRating = parseInt(document.getElementById("ratingInput").value) || 0;
+
+    const newGame = new Game(
+      title,
+      designer,
+      artist,
+      publisher,
+      year,
+      players,
+      time,
+      difficulty,
+      url,
+      playCount,
+      personalRating
+    );
+
+    saveGame(newGame);
+    games.push(newGame);
+    
+    renderGames();
+
+    document.getElementById("addGameForm").reset();
+    });
+
 }
 // #endregion
